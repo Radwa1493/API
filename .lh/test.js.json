@@ -1,0 +1,30 @@
+{
+    "sourceFile": "test.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1686228261647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686228278487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,20 @@\n const fetch = require('node-fetch');\r\n+const requestBody = {\r\n+    \"id\": 0,\r\n+    \"category\": {\r\n+      \"id\": 0,\r\n+      \"name\": \"string\"\r\n+    },\r\n+    \"name\": \"doggie\",\r\n+    \"photoUrls\": [\r\n+      \"string\"\r\n+    ],\r\n+    \"tags\": [\r\n+      {\r\n+        \"id\": 0,\r\n+        \"name\": \"string\"\r\n+      }\r\n+    ],\r\n+    \"status\": \"available\"\r\n+  };\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228296551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,16 @@\n       }\r\n     ],\r\n     \"status\": \"available\"\r\n   };\r\n-  \n\\ No newline at end of file\n+  \r\n+  {\r\n+    \"id\": 0, \"category\": {\r\n+    \"id\": 0,\r\n+    \"name\": \"string\" },\r\n+    \"name\": \"doggie\", \"photoUrls\": [\r\n+    \"string\" ],\r\n+    \"tags\": [ {\r\n+    \"id\": 0,\r\n+    \"name\": \"string\" }\r\n+    ],\r\n+    \"status\": \"available\" }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228305044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,5 @@\n     ],\r\n     \"status\": \"available\"\r\n   };\r\n   \r\n-  {\r\n-    \"id\": 0, \"category\": {\r\n-    \"id\": 0,\r\n-    \"name\": \"string\" },\r\n-    \"name\": \"doggie\", \"photoUrls\": [\r\n-    \"string\" ],\r\n-    \"tags\": [ {\r\n-    \"id\": 0,\r\n-    \"name\": \"string\" }\r\n-    ],\r\n-    \"status\": \"available\" }\n\\ No newline at end of file\n+  \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1686228261647,
+            "name": "Commit-0",
+            "content": "const fetch = require('node-fetch');\r\n"
+        }
+    ]
+}
