@@ -1,0 +1,134 @@
+{
+    "sourceFile": "api.test.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1686229689949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686229709174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +0,0 @@\n-const fetch = require('node-fetch');\r\n-\r\n-async function addNewPet() {\r\n-  // Set up the request body\r\n-  const requestBody = { /* ... */ };\r\n-\r\n-  // Make the API request\r\n-  const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-    method: 'POST',\r\n-    headers: {\r\n-      'Content-Type': 'application/json'\r\n-    },\r\n-    body: JSON.stringify(requestBody)\r\n-  });\r\n-  const jsonResponse = await response.json();\r\n-\r\n-  // Check that the response status is OK and that the response body has the expected values\r\n-  expect(response.status).toBe(200);\r\n-  expect(jsonResponse.id).toBeDefined();\r\n-  expect(jsonResponse.category).toEqual(requestBody.category);\r\n-  expect(jsonResponse.name).toBe(requestBody.name);\r\n-  expect(jsonResponse.photoUrls).toEqual(requestBody.photoUrls);\r\n-  expect(jsonResponse.tags).toEqual(requestBody.tags);\r\n-  expect(jsonResponse.status).toBe(requestBody.status);\r\n-}\r\n-\r\n-addNewPet();\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686229730653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,42 @@\n-\n+const fetch = require('node-fetch');\r\n+\r\n+test('should add a new pet', async () => {\r\n+  // Set up the request body\r\n+  const requestBody = {\r\n+    \"id\": 0,\r\n+    \"category\": {\r\n+      \"id\": 0,\r\n+      \"name\": \"string\"\r\n+    },\r\n+    \"name\": \"doggie\",\r\n+    \"photoUrls\": [\r\n+      \"string\"\r\n+    ],\r\n+    \"tags\": [\r\n+      {\r\n+        \"id\": 0,\r\n+        \"name\": \"string\"\r\n+      }\r\n+    ],\r\n+    \"status\": \"available\"\r\n+  };\r\n+\r\n+  // Make the API request\r\n+  const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+    method: 'POST',\r\n+    headers: {\r\n+      'Content-Type': 'application/json'\r\n+    },\r\n+    body: JSON.stringify(requestBody)\r\n+  });\r\n+  const jsonResponse = await response.json();\r\n+\r\n+  // Check that the response status is OK and that the response body has the expected values\r\n+  expect(response.status).toBe(200);\r\n+  expect(jsonResponse.id).toBeDefined();\r\n+  expect(jsonResponse.category).toEqual(requestBody.category);\r\n+  expect(jsonResponse.name).toBe(requestBody.name);\r\n+  expect(jsonResponse.photoUrls).toEqual(requestBody.photoUrls);\r\n+  expect(jsonResponse.tags).toEqual(requestBody.tags);\r\n+  expect(jsonResponse.status).toBe(requestBody.status);\r\n+});\r\n"
+                },
+                {
+                    "date": 1686229760618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,11 +32,6 @@\n   const jsonResponse = await response.json();\r\n \r\n   // Check that the response status is OK and that the response body has the expected values\r\n   expect(response.status).toBe(200);\r\n-  expect(jsonResponse.id).toBeDefined();\r\n-  expect(jsonResponse.category).toEqual(requestBody.category);\r\n-  expect(jsonResponse.name).toBe(requestBody.name);\r\n-  expect(jsonResponse.photoUrls).toEqual(requestBody.photoUrls);\r\n-  expect(jsonResponse.tags).toEqual(requestBody.tags);\r\n-  expect(jsonResponse.status).toBe(requestBody.status);\r\n+\r\n });\r\n"
+                },
+                {
+                    "date": 1686230020928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n const fetch = require('node-fetch');\r\n \r\n+SyntaxError: Cannot use import statement outside a module\r\n+\r\n+> 1 | const fetch = require('node-fetch');\r\n test('should add a new pet', async () => {\r\n   // Set up the request body\r\n   const requestBody = {\r\n     \"id\": 0,\r\n"
+                },
+                {
+                    "date": 1686230038963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fetch = require('node-fetch');\r\n \r\n-SyntaxError: Cannot use import statement outside a module\r\n \r\n+import fetch from 'node-fetch';\r\n > 1 | const fetch = require('node-fetch');\r\n test('should add a new pet', async () => {\r\n   // Set up the request body\r\n   const requestBody = {\r\n"
+                },
+                {
+                    "date": 1686230044727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fetch = require('node-fetch');\r\n \r\n \r\n import fetch from 'node-fetch';\r\n-> 1 | const fetch = require('node-fetch');\r\n+const fetch = require('node-fetch');\r\n test('should add a new pet', async () => {\r\n   // Set up the request body\r\n   const requestBody = {\r\n     \"id\": 0,\r\n"
+                },
+                {
+                    "date": 1686230430221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+const fetch = require('node-fetch');\r\n+\r\n+describe('Create Pet Test', () => {\r\n+  it('should create a new pet and return a 200 status code', async () => {\r\n+    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+      method: 'POST',\r\n+      headers: { 'Content-Type': 'application/json' },\r\n+      body: JSON.stringify({\r\n+        id: 0,\r\n+        category: {\r\n+          id: 0,\r\n+          name: 'string'\r\n+        },\r\n+        name: 'doggie',\r\n+        photoUrls: [\r\n+          'string'\r\n+        ],\r\n+        tags: [\r\n+          {\r\n+            id: 0,\r\n+            name: 'string'\r\n+          }\r\n+        ],\r\n+        status: 'available'\r\n+      })\r\n+    });\r\n+    \r\n+    expect(response.status).toBe(200);\r\n+  });\r\n+});\r\n"
+                },
+                {
+                    "date": 1686230444603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fetch = require('node-fetch');\r\n \r\n describe('Create Pet Test', () => {\r\n-  it('should create a new pet and return a 200 status code', async () => {\r\n+  it('POST create a new pet and return a 200 status code', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n       headers: { 'Content-Type': 'application/json' },\r\n       body: JSON.stringify({\r\n@@ -27,44 +27,4 @@\n     \r\n     expect(response.status).toBe(200);\r\n   });\r\n });\r\n-const fetch = require('node-fetch');\r\n-\r\n-\r\n-import fetch from 'node-fetch';\r\n-const fetch = require('node-fetch');\r\n-test('should add a new pet', async () => {\r\n-  // Set up the request body\r\n-  const requestBody = {\r\n-    \"id\": 0,\r\n-    \"category\": {\r\n-      \"id\": 0,\r\n-      \"name\": \"string\"\r\n-    },\r\n-    \"name\": \"doggie\",\r\n-    \"photoUrls\": [\r\n-      \"string\"\r\n-    ],\r\n-    \"tags\": [\r\n-      {\r\n-        \"id\": 0,\r\n-        \"name\": \"string\"\r\n-      }\r\n-    ],\r\n-    \"status\": \"available\"\r\n-  };\r\n-\r\n-  // Make the API request\r\n-  const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-    method: 'POST',\r\n-    headers: {\r\n-      'Content-Type': 'application/json'\r\n-    },\r\n-    body: JSON.stringify(requestBody)\r\n-  });\r\n-  const jsonResponse = await response.json();\r\n-\r\n-  // Check that the response status is OK and that the response body has the expected values\r\n-  expect(response.status).toBe(200);\r\n-\r\n-});\r\n"
+                },
+                {
+                    "date": 1686230450725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fetch = require('node-fetch');\r\n \r\n describe('Create Pet Test', () => {\r\n-  it('POST create a new pet and return a 200 status code', async () => {\r\n+  it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n       headers: { 'Content-Type': 'application/json' },\r\n       body: JSON.stringify({\r\n"
+                },
+                {
+                    "date": 1686230648171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const fetch = require('node-fetch');\r\n+const fetch = require('node-fetch');\r\n \r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n"
+                },
+                {
+                    "date": 1686230826323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-const fetch = require('node-fetch');\r\n-const fetch = require('node-fetch');\r\n-\r\n+import fetch from 'node-fetch';\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                },
+                {
+                    "date": 1686230914502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import fetch from 'node-fetch';\r\n+const fetch = require('node-fetch');\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                },
+                {
+                    "date": 1686230993766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const fetch = require('node-fetch');\r\n+const http = require('node:http');\r\n+\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                },
+                {
+                    "date": 1686249598793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+const fetch = require('node-fetch');\r\n+\r\n+describe('Create Pet Test', () => {\r\n+  it('POST create a new pet', async () => {\r\n+\r\n+    \r\n+    expect(response.status).toBe(200);\r\n+  });\r\n+});\r\n"
+                },
+                {
+                    "date": 1686249604493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,40 +1,31 @@\n const fetch = require('node-fetch');\r\n+const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+  method: 'POST',\r\n+  headers: { 'Content-Type': 'application/json' },\r\n+  body: JSON.stringify({\r\n+    id: 0,\r\n+    category: {\r\n+      id: 0,\r\n+      name: 'string'\r\n+    },\r\n+    name: 'doggie',\r\n+    photoUrls: [\r\n+      'string'\r\n+    ],\r\n+    tags: [\r\n+      {\r\n+        id: 0,\r\n+        name: 'string'\r\n+      }\r\n+    ],\r\n+    status: 'available'\r\n+  })\r\n+});\r\n \r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n \r\n     \r\n     expect(response.status).toBe(200);\r\n   });\r\n });\r\n-const fetch = require('node-fetch');\r\n-const http = require('node:http');\r\n-\r\n-describe('Create Pet Test', () => {\r\n-  it('POST create a new pet', async () => {\r\n-    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-      method: 'POST',\r\n-      headers: { 'Content-Type': 'application/json' },\r\n-      body: JSON.stringify({\r\n-        id: 0,\r\n-        category: {\r\n-          id: 0,\r\n-          name: 'string'\r\n-        },\r\n-        name: 'doggie',\r\n-        photoUrls: [\r\n-          'string'\r\n-        ],\r\n-        tags: [\r\n-          {\r\n-            id: 0,\r\n-            name: 'string'\r\n-          }\r\n-        ],\r\n-        status: 'available'\r\n-      })\r\n-    });\r\n-    \r\n-    expect(response.status).toBe(200);\r\n-  });\r\n-});\r\n"
+                },
+                {
+                    "date": 1686249626939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,30 @@\n const fetch = require('node-fetch');\r\n-const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-  method: 'POST',\r\n-  headers: { 'Content-Type': 'application/json' },\r\n-  body: JSON.stringify({\r\n-    id: 0,\r\n-    category: {\r\n-      id: 0,\r\n-      name: 'string'\r\n-    },\r\n-    name: 'doggie',\r\n-    photoUrls: [\r\n-      'string'\r\n-    ],\r\n-    tags: [\r\n-      {\r\n-        id: 0,\r\n-        name: 'string'\r\n-      }\r\n-    ],\r\n-    status: 'available'\r\n-  })\r\n-});\r\n \r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n-\r\n+    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+      method: 'POST',\r\n+      headers: { 'Content-Type': 'application/json' },\r\n+      body: JSON.stringify({\r\n+        id: 0,\r\n+        category: {\r\n+          id: 0,\r\n+          name: 'string'\r\n+        },\r\n+        name: 'doggie',\r\n+        photoUrls: [\r\n+          'string'\r\n+        ],\r\n+        tags: [\r\n+          {\r\n+            id: 0,\r\n+            name: 'string'\r\n+          }\r\n+        ],\r\n+        status: 'available'\r\n+      })\r\n+    });\r\n     \r\n     expect(response.status).toBe(200);\r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686249768694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,44 @@\n+const fetch = require('node-fetch');\r\n+POST API: h_ps://petstore.swagger.io/v2/pet\r\n+Descrip0on: Its a pet store API, which will add a new pet into its repository & create a unique\r\n+PetId for the new entry.\r\n+Request Body:\r\n+{\r\n+\"id\": 0, \"category\": {\r\n+\"id\": 0,\r\n+\"name\": \"string\" },\r\n+\"name\": \"doggie\", \"photoUrls\": [\r\n+\"string\" ],\r\n+\"tags\": [ {\r\n+\"id\": 0,\r\n+\"name\": \"string\" }\r\n+],\r\n+\"status\": \"available\" } write code using jest and needed dependancies and excute comand \r\n+describe('Create Pet Test', () => {\r\n+  it('POST create a new pet', async () => {\r\n+    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+      method: 'POST',\r\n+      headers: { 'Content-Type': 'application/json' },\r\n+      body: JSON.stringify({\r\n+        id: 0,\r\n+        category: {\r\n+          id: 0,\r\n+          name: 'string'\r\n+        },\r\n+        name: 'doggie',\r\n+        photoUrls: [\r\n+          'string'\r\n+        ],\r\n+        tags: [\r\n+          {\r\n+            id: 0,\r\n+            name: 'string'\r\n+          }\r\n+        ],\r\n+        status: 'available'\r\n+      })\r\n+    });\r\n+    \r\n+    expect(response.status).toBe(200);\r\n+  });\r\n+});\r\n"
+                },
+                {
+                    "date": 1686249786387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,50 +1,23 @@\n const fetch = require('node-fetch');\r\n-POST API: h_ps://petstore.swagger.io/v2/pet\r\n-Descrip0on: Its a pet store API, which will add a new pet into its repository & create a unique\r\n-PetId for the new entry.\r\n-Request Body:\r\n-{\r\n-\"id\": 0, \"category\": {\r\n-\"id\": 0,\r\n-\"name\": \"string\" },\r\n-\"name\": \"doggie\", \"photoUrls\": [\r\n-\"string\" ],\r\n-\"tags\": [ {\r\n-\"id\": 0,\r\n-\"name\": \"string\" }\r\n-],\r\n-\"status\": \"available\" } write code using jest and needed dependancies and excute comand \r\n-describe('Create Pet Test', () => {\r\n-  it('POST create a new pet', async () => {\r\n-    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-      method: 'POST',\r\n-      headers: { 'Content-Type': 'application/json' },\r\n-      body: JSON.stringify({\r\n-        id: 0,\r\n-        category: {\r\n-          id: 0,\r\n-          name: 'string'\r\n-        },\r\n-        name: 'doggie',\r\n-        photoUrls: [\r\n-          'string'\r\n-        ],\r\n-        tags: [\r\n-          {\r\n-            id: 0,\r\n-            name: 'string'\r\n-          }\r\n-        ],\r\n-        status: 'available'\r\n-      })\r\n-    });\r\n-    \r\n-    expect(response.status).toBe(200);\r\n-  });\r\n-});\r\n-const fetch = require('node-fetch');\r\n+const requestBody = {\r\n+  id: 0,\r\n+  category: {\r\n+    id: 0,\r\n+    name: 'string'\r\n+  },\r\n+  name: 'doggie',\r\n+  photoUrls: [\r\n+    'string'\r\n+  ],\r\n+  tags: [{\r\n+    id: 0,\r\n+    name: 'string'\r\n+  }],\r\n+  status: 'available'\r\n+};\r\n \r\n+\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                },
+                {
+                    "date": 1686249860532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-const fetch = require('node-fetch');\r\n-const requestBody = {\r\n+const axios = require('axios');const requestBody = {\r\n   id: 0,\r\n   category: {\r\n     id: 0,\r\n     name: 'string'\r\n"
+                },
+                {
+                    "date": 1686249872665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-const axios = require('axios');const requestBody = {\r\n+const axios = require('axios');\r\n+const requestBody = {\r\n   id: 0,\r\n   category: {\r\n     id: 0,\r\n     name: 'string'\r\n@@ -17,30 +18,7 @@\n \r\n \r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n-    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n-      method: 'POST',\r\n-      headers: { 'Content-Type': 'application/json' },\r\n-      body: JSON.stringify({\r\n-        id: 0,\r\n-        category: {\r\n-          id: 0,\r\n-          name: 'string'\r\n-        },\r\n-        name: 'doggie',\r\n-        photoUrls: [\r\n-          'string'\r\n-        ],\r\n-        tags: [\r\n-          {\r\n-            id: 0,\r\n-            name: 'string'\r\n-          }\r\n-        ],\r\n-        status: 'available'\r\n-      })\r\n-    });\r\n-    \r\n-    expect(response.status).toBe(200);\r\n+   \r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686249951378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,10 @@\n \r\n \r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n-   \r\n+ \r\n+    // Make the POST request to the API\r\n+    const response = await axios.post('https://petstore.swagger.io/v2/pet', requestBody);\r\n+ \r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686249961249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n   it('POST create a new pet', async () => {\r\n  \r\n     // Make the POST request to the API\r\n     const response = await axios.post('https://petstore.swagger.io/v2/pet', requestBody);\r\n- \r\n+    expect(response.data.id).toBeDefined();\r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686250005836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n   it('POST create a new pet', async () => {\r\n  \r\n     // Make the POST request to the API\r\n     const response = await axios.post('https://petstore.swagger.io/v2/pet', requestBody);\r\n-    expect(response.data.id).toBeDefined();\r\n+    expect(response.status)..toBe(200);\r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686250098617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,30 @@\n-const axios = require('axios');\r\n-const requestBody = {\r\n-  id: 0,\r\n-  category: {\r\n-    id: 0,\r\n-    name: 'string'\r\n-  },\r\n-  name: 'doggie',\r\n-  photoUrls: [\r\n-    'string'\r\n-  ],\r\n-  tags: [{\r\n-    id: 0,\r\n-    name: 'string'\r\n-  }],\r\n-  status: 'available'\r\n-};\r\n+const fetch = require('node-fetch');\r\n \r\n-\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n- \r\n-    // Make the POST request to the API\r\n-    const response = await axios.post('https://petstore.swagger.io/v2/pet', requestBody);\r\n-    expect(response.status)..toBe(200);\r\n+    const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n+      method: 'POST',\r\n+      headers: { 'Content-Type': 'application/json' },\r\n+      body: JSON.stringify({\r\n+        id: 0,\r\n+        category: {\r\n+          id: 0,\r\n+          name: 'string'\r\n+        },\r\n+        name: 'doggie',\r\n+        photoUrls: [\r\n+          'string'\r\n+        ],\r\n+        tags: [\r\n+          {\r\n+            id: 0,\r\n+            name: 'string'\r\n+          }\r\n+        ],\r\n+        status: 'available'\r\n+      })\r\n+    });\r\n+    \r\n+    expect(response.status).toBe(200);\r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1686250104015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n const fetch = require('node-fetch');\r\n-\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                },
+                {
+                    "date": 1686250335111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,26 +3,9 @@\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n       headers: { 'Content-Type': 'application/json' },\r\n-      body: JSON.stringify({\r\n-        id: 0,\r\n-        category: {\r\n-          id: 0,\r\n-          name: 'string'\r\n-        },\r\n-        name: 'doggie',\r\n-        photoUrls: [\r\n-          'string'\r\n-        ],\r\n-        tags: [\r\n-          {\r\n-            id: 0,\r\n-            name: 'string'\r\n-          }\r\n-        ],\r\n-        status: 'available'\r\n-      })\r\n+      body: JSON.stringify(petData)\r\n     });\r\n     \r\n     expect(response.status).toBe(200);\r\n   });\r\n"
+                },
+                {
+                    "date": 1686250357612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import petData from './pets.json';\r\n const fetch = require('node-fetch');\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n"
+                },
+                {
+                    "date": 1686250373165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import petData from './pets.js./n';\r\n+import petData from './pets.js.n';\r\n const fetch = require('node-fetch');\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n"
+                },
+                {
+                    "date": 1686250582631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-const petData = require('./pets.json');const fetch = require('node-fetch');\r\n+const petData = require('./pets.json');\r\n+const fetch = require('node-fetch');\r\n describe('Create Pet Test', () => {\r\n   it('POST create a new pet', async () => {\r\n     const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n       method: 'POST',\r\n"
+                }
+            ],
+            "date": 1686229689949,
+            "name": "Commit-0",
+            "content": "const fetch = require('node-fetch');\r\n\r\nasync function addNewPet() {\r\n  // Set up the request body\r\n  const requestBody = { /* ... */ };\r\n\r\n  // Make the API request\r\n  const response = await fetch('https://petstore.swagger.io/v2/pet', {\r\n    method: 'POST',\r\n    headers: {\r\n      'Content-Type': 'application/json'\r\n    },\r\n    body: JSON.stringify(requestBody)\r\n  });\r\n  const jsonResponse = await response.json();\r\n\r\n  // Check that the response status is OK and that the response body has the expected values\r\n  expect(response.status).toBe(200);\r\n  expect(jsonResponse.id).toBeDefined();\r\n  expect(jsonResponse.category).toEqual(requestBody.category);\r\n  expect(jsonResponse.name).toBe(requestBody.name);\r\n  expect(jsonResponse.photoUrls).toEqual(requestBody.photoUrls);\r\n  expect(jsonResponse.tags).toEqual(requestBody.tags);\r\n  expect(jsonResponse.status).toBe(requestBody.status);\r\n}\r\n\r\naddNewPet();\r\n"
+        }
+    ]
+}

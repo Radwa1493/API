@@ -1,0 +1,24 @@
+{
+  "name": "api_jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest api.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radwa1493/API.git"
+  },
+  "type": "module"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Radwa1493/API/issues"
+  },
+  "homepage": "https://github.com/Radwa1493/API#readme",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "node-fetch": "^3.3.1"
+  }
+}
