@@ -1,6 +1,7 @@
 const petData = require('./pets.json');
 const fetch = require('node-fetch');
 
+
 // Test suite for creating and fetching pets using API.
 describe('Pet API Test', () => {
   // Test case uses the HTTP POST method to create a new pet with the given data.
@@ -29,9 +30,9 @@ describe('Pet API Test', () => {
     expect(response.status).toBe(200);
 
     const responseData = await response.json();
-    //Display pet name and id
     console.log(`Pet name ${responseData.name} and ID ${responseData.id}`);
-    //Assert on the pet id in the responce.
+
     expect(responseData.id).toBe(petId);
+    // validate other details of the pet as required
   });
   });

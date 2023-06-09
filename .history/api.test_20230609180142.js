@@ -32,6 +32,7 @@ describe('Pet API Test', () => {
     //Display pet name and id
     console.log(`Pet name ${responseData.name} and ID ${responseData.id}`);
     //Assert on the pet id in the responce.
+
     expect(responseData.id).toBe(petId);
   });
   });
