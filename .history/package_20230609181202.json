@@ -1,0 +1,27 @@
+{
+  "name": "api_jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest api.test.js",
+    "test": "jest api.test.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radwa1493/API.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Radwa1493/API/issues"
+  },
+  "homepage": "https://github.com/Radwa1493/API#readme",
+  "devDependencies": {
+    "jest": "^25.5.4",
+    "jest-html-reporters": "^3.1.4",
+    "node-fetch": "^2.6.11"
+  }
+}

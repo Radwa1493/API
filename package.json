@@ -4,7 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest api.test.js"
+    "test": "jest api.test.js",
+    "test:report": "jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\"Jest Test Results\" --outputPath=test-results.html"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./test-results.html",
+          "includeFailureMsg": true
+        }
+      ]
+    ]
   },
   "repository": {
     "type": "git",
@@ -19,9 +33,7 @@
   "homepage": "https://github.com/Radwa1493/API#readme",
   "devDependencies": {
     "jest": "^25.5.4",
-    "node-fetch": "^2.6.11"
-  },
-  "dependencies": {
-    "axios": "^1.4.0"
+    "jest-html-reporter": "^3.10.0",
+    "node-fetch": "^2.6.0"
   }
 }

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1686231257795,
@@ -12,6 +12,54 @@
                 {
                     "date": 1686231265100,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n Download libraries \r\n     Run in terminal Terminal : npm install\r\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n-    Run in terminal Terminal :\n\\ No newline at end of file\n+    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324553987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+Download libraries \r\n+    Run in terminal Terminal : npm install\r\n+\r\n+    if an error occurce try to delete node_modules and run the bellow command\r\n+    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 \"jest-html-reporter\": \"^3.10.0\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324561709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n Download libraries \r\n     Run in terminal Terminal : npm install\r\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n-    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 \"jest-html-reporter\": \"^3.10.0\"\n-Download libraries \r\n-    Run in terminal Terminal : npm install\r\n-\r\n-    if an error occurce try to delete node_modules and run the bellow command\r\n-    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0\n\\ No newline at end of file\n+    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\"\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324604731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n Download libraries \r\n     Run in terminal Terminal : npm install\r\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n-    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\"\n\\ No newline at end of file\n+    Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n+\r\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324612148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n-    \n\\ No newline at end of file\n+ The    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324623039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n- The    \n\\ No newline at end of file\n+ The Test cases code in    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324632446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n \r\n     if an error occurce try to delete node_modules and run the bellow command\r\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n- The Test cases code in    \n\\ No newline at end of file\n+Project structure \r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686324674503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,8 @@\n     if an error occurce try to delete node_modules and run the bellow command\r\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n-  \n\\ No newline at end of file\n+my-api-project/\r\n+├── src/\r\n+|   ├── controllers/\r\n+│   │   ├── userController.js\r\n"
+                },
+                {
+                    "date": 1686324691993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n     if an error occurce try to delete node_modules and run the bellow command\r\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n-my-api-project/\r\n+API_Jest/\r\n ├── src/\r\n |   ├── controllers/\r\n │   │   ├── userController.js\r\n"
+                },
+                {
+                    "date": 1686324697406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n API_Jest/\r\n-├── src/\r\n+├── api/\r\n |   ├── controllers/\r\n │   │   ├── userController.js\r\n"
+                },
+                {
+                    "date": 1686324702622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n API_Jest/\r\n-├── api/\r\n+├── api.test.js/\r\n |   ├── controllers/\r\n │   │   ├── userController.js\r\n"
+                },
+                {
+                    "date": 1686324716164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n API_Jest/\r\n-├── api.test.js/\r\n+├── api.test.js/      \r\n |   ├── controllers/\r\n │   │   ├── userController.js\r\n"
+                },
+                {
+                    "date": 1686324894801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     Run in terminal Terminal : npm install jest@25.5.4 node-fetch@2.6.0 jest-html-reporter@3.10.0\r\n \r\n Project structure \r\n API_Jest/\r\n-├── api.test.js/      > \r\n+├── api.test.js/      > T\r\n |   ├── controllers/\r\n │   │   ├── userController.js\r\n"
                 }
             ],
             "date": 1686231257795,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 29,
             "patches": [
                 {
                     "date": 1686229866443,
@@ -32,6 +32,98 @@
                 {
                     "date": 1686230821583,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"jest api.test.mjs\"\n+    \"test\": \"jest api.test.js\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n"
+                },
+                {
+                    "date": 1686322997174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+{\n+  \"name\": \"api_jest\",\n+  \"version\": \"1.0.0\",\n+  \"description\": \"\",\n+  \"main\": \"index.js\",\n+  \"scripts\": {\n+    \"test\": \"jest api.test.js\"\n+  },\n+  \"repository\": {\n+    \"type\": \"git\",\n+    \"url\": \"git+https://github.com/Radwa1493/API.git\"\n+  },\n+  \"type\": \"module\",\n+  \"author\": \"\",\n+  \"license\": \"ISC\",\n+  \"bugs\": {\n+    \"url\": \"https://github.com/Radwa1493/API/issues\"\n+  },\n+  \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n+  \"devDependencies\": {\n+    \"jest\": \"^25.5.4\",\n+    \"node-fetch\": \"^2.6.11\"\n+  },\n+  \"dependencies\": {\n+  }\n+}\n"
+                },
+                {
+                    "date": 1686323518724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\"\n+    \"test\": \"jest api.test.js\"\n+\n   },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n@@ -18,33 +20,8 @@\n   },\n   \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n   \"devDependencies\": {\n     \"jest\": \"^25.5.4\",\n+    \"jest-html-reporters\": \"^3.1.4\",\n     \"node-fetch\": \"^2.6.11\"\n-  },\n-  \"dependencies\": {\n   }\n }\n-{\n-  \"name\": \"api_jest\",\n-  \"version\": \"1.0.0\",\n-  \"description\": \"\",\n-  \"main\": \"index.js\",\n-  \"scripts\": {\n-    \"test\": \"jest api.test.js\"\n-  },\n-  \"repository\": {\n-    \"type\": \"git\",\n-    \"url\": \"git+https://github.com/Radwa1493/API.git\"\n-  },\n-  \"type\": \"module\",\n-  \"author\": \"\",\n-  \"license\": \"ISC\",\n-  \"bugs\": {\n-    \"url\": \"https://github.com/Radwa1493/API/issues\"\n-  },\n-  \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n-  \"devDependencies\": {\n-    \"jest\": \"^29.5.0\",\n-    \"node-fetch\": \"^3.3.1\"\n-  }\n-}\n"
+                },
+                {
+                    "date": 1686323524700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"jest api.test.js\"\n-    \"test\": \"jest api.test.js\"\n+    \"test\": \"jest api.test.js\",\n+    \"test\": \"jest api.test.js     \"test\": \"jest api.test.js\"\n+    \"\n \n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                },
+                {
+                    "date": 1686323537228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test\": \"jest api.test.js     \"test\": \"jest api.test.js\"\n-    \"\n+    \"test\": \"jest api.test.js ----coverage\"\n \n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                },
+                {
+                    "date": 1686323673192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test\": \"jest api.test.js ----coverage\"\n-\n+    \"test1\": \"jest api.test.js --coverage\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n@@ -19,9 +18,9 @@\n     \"url\": \"https://github.com/Radwa1493/API/issues\"\n   },\n   \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n   \"devDependencies\": {\n+    \"istanbul-reports\": \"^3.1.5\",\n     \"jest\": \"^25.5.4\",\n-    \"jest-html-reporters\": \"^3.1.4\",\n     \"node-fetch\": \"^2.6.11\"\n   }\n }\n"
+                },
+                {
+                    "date": 1686323686060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test1\": \"jest api.test.js --coverage\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n@@ -18,9 +17,8 @@\n     \"url\": \"https://github.com/Radwa1493/API/issues\"\n   },\n   \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n   \"devDependencies\": {\n-    \"istanbul-reports\": \"^3.1.5\",\n     \"jest\": \"^25.5.4\",\n     \"node-fetch\": \"^2.6.11\"\n   }\n }\n"
+                },
+                {
+                    "date": 1686323718035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"jest api.test.js\",\n+    \"test\": \"jest api.test.js\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n"
+                },
+                {
+                    "date": 1686323848832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"jest api.test.js\"\n-  },\n+    \"test\": \"jest api.test.js\",\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324042619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,12 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n+    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\"\n+  \n+  \n+  },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n@@ -17,7 +21,8 @@\n   },\n   \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n   \"devDependencies\": {\n     \"jest\": \"^25.5.4\",\n+    \"jest-html-reporter\": \"^3.10.0\",\n     \"node-fetch\": \"^2.6.11\"\n   }\n }\n"
+                },
+                {
+                    "date": 1686324049175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\"\n+    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n+    \"jest api.test.js --json --outputFile=test-results.json\n+    \"\n   \n   \n   },\n   \"repository\": {\n"
+                },
+                {
+                    "date": 1686324056315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,9 @@\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n-    \"jest api.test.js --json --outputFile=test-results.json\n-    \"\n+    \"test:report\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n   \"repository\": {\n"
+                },
+                {
+                    "date": 1686324352064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,13 @@\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n-    \"test:report\":  \"jest api.test.js --json --outputFile=test-results.json\"\n+    \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n+  \n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324359304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,12 @@\n     \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n-  \n+  reporters: [\n+    'default',\n+    'cucumber-jest-json-reporter' // Add this line\n+  ],\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324372009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,20 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n+  reporters: [\n+    'default',\n+    'cucumber-jest-json-reporter' // Add this line\n+  ],\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n     \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n-  reporters: [\n-    'default',\n-    'cucumber-jest-json-reporter' // Add this line\n-  ],\n+\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324380356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n-  reporters: [\n+  reporters: {}\n     'default',\n     'cucumber-jest-json-reporter' // Add this line\n   ],\n   \"scripts\": {\n"
+                },
+                {
+                    "date": 1686324386238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n-  reporters: {}\n+  reporters: {\n     'default',\n     'cucumber-jest-json-reporter' // Add this line\n-  ],\n+},\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n     \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n"
+                },
+                {
+                    "date": 1686324392054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n-  reporters: {\n+  \"reporters: {\n     'default',\n     'cucumber-jest-json-reporter' // Add this line\n },\n   \"scripts\": {\n"
+                },
+                {
+                    "date": 1686324399649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n-  \"reporters: {\n-    'default',\n+  \"reporters\": {\n+    \"default',\n     'cucumber-jest-json-reporter' // Add this line\n },\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n"
+                },
+                {
+                    "date": 1686324406370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"reporters\": {\n-    \"default',\n-    'cucumber-jest-json-reporter' // Add this line\n+    \"default\",\n+    \"cucumber-jest-json-reporter' // Add this line\n },\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n"
+                },
+                {
+                    "date": 1686324412934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"reporters\": {\n-    \"default\",\n-    \"cucumber-jest-json-reporter' // Add this line\n+    \"default\"\n+    \"cucumber-jest-json-reporter\" \n },\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n"
+                },
+                {
+                    "date": 1686324420837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,15 @@\n   \"name\": \"api_jest\",\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n-  \"reporters\": {\n-    \"default\"\n-    \"cucumber-jest-json-reporter\" \n-},\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n     \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n     \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n-\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324480394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,19 @@\n     \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n   \n   \n   },\n+  \"jest\": {\n+    \"reporters\": [\n+      \"default\",\n+      [\"jest-html-reporter\", {\n+        \"pageTitle\": \"Test Report\",\n+        \"outputPath\": \"./test-results.html\",\n+        \"includeFailureMsg\": true\n+      }]\n+    ]\n+  }\n+  \n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686324505015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,10 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n-    \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n+    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",  \n   \n-  \n   },\n   \"jest\": {\n     \"reporters\": [\n       \"default\",\n@@ -19,9 +17,9 @@\n         \"includeFailureMsg\": true\n       }]\n     ]\n   }\n-  \n+,  \n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
                 }
             ],
             "date": 1686229866443,
