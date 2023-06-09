@@ -16,16 +16,14 @@ describe('Create Pet Test', () => {
 
 
   test('GET API - Fetch pet details', async () => {
-    const petId = 1; // replace with a valid pet ID
+    const petId = 123; // replace with a valid pet ID
     
     const response = await fetch(`https://petstore.swagger.io/v2/pet/${petId}`);
     
     expect(response.ok).toBe(true);
 
-    const responseData = await response.json();
-    console.log(`Pet name ${responseData.name} and ID ${responseData.id}`);
-
-    expect(responseData.id).toBe(petId);
+    const data = await response.json();
+    expect(data.id).toBe(petId);
     // validate other details of the pet as required
   });
 });
