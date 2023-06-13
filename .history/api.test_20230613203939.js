@@ -8,7 +8,7 @@ describe('Pet API Test', () => {
     const response = await fetch('https://petstore.swagger.io/v2/pet', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(petData),
+      body: JSON.stringify(petData)
     });
     // Parse the response to JSON.
     const responseData = await response.json();
@@ -17,23 +17,21 @@ describe('Pet API Test', () => {
     //Assert on the pet name.
     expect(responseData.name).toBe(petData.name);
     //Display pet name and id
-    console.log(
-      `New pet created with name ${responseData.name} and ID ${responseData.id}`
-    );
+    console.log(`New pet created with name ${responseData.name} and ID ${responseData.id}`);
   });
 
-  // Test case uses the HTTP GET method to fetch details of a pet with ID.
+// Test case uses the HTTP GET method to fetch details of a pet with ID.
   test('GET API - Fetch pet details', async () => {
     const petId = 12;
-
+    
     const response = await fetch(`https://petstore.swagger.io/v2/pet/${petId}`);
-    //Assert on the status code to be 200.
+    //Assert on the status code to be 200.  
     expect(response.status).toBe(200);
 
     const responseData = await response.json();
     //Display pet name and id
     console.log(`Pet name ${responseData.name} and ID ${responseData.id}`);
     //Assert on the pet id in the responce.
-    expect(responseData.id).toBe(petId);
+    expect(responseData.id).toBe(petId)
   });
-});
+  });

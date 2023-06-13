@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 29,
+            "activePatchIndex": 30,
             "patches": [
                 {
                     "date": 1686229866443,
@@ -124,6 +124,10 @@
                 {
                     "date": 1686324505015,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,10 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",\n-    \"test:report1\":  \"jest api.test.js --json --outputFile=test-results.json\"\n+    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",  \n   \n-  \n   },\n   \"jest\": {\n     \"reporters\": [\n       \"default\",\n@@ -19,9 +17,9 @@\n         \"includeFailureMsg\": true\n       }]\n     ]\n   }\n-  \n+,  \n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n"
+                },
+                {
+                    "date": 1686677926135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,22 +4,26 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"jest api.test.js\",\n-    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\",  \n-  \n+    \"test:report\": \"jest api.test.js --json --outputFile=test-results.json && cat test-results.json | jest-html-reporter --pageTitle=\\\"Jest Test Results\\\" --outputPath=test-results.html\"\n+    ,\"prettier\": \"prettier --write \\\"api.test.js\\\"\"\n+\n   },\n+ \n   \"jest\": {\n     \"reporters\": [\n       \"default\",\n-      [\"jest-html-reporter\", {\n-        \"pageTitle\": \"Test Report\",\n-        \"outputPath\": \"./test-results.html\",\n-        \"includeFailureMsg\": true\n-      }]\n+      [\n+        \"jest-html-reporter\",\n+        {\n+          \"pageTitle\": \"Test Report\",\n+          \"outputPath\": \"./test-results.html\",\n+          \"includeFailureMsg\": true\n+        }\n+      ]\n     ]\n-  }\n-,  \n+  },\n   \"repository\": {\n     \"type\": \"git\",\n     \"url\": \"git+https://github.com/Radwa1493/API.git\"\n   },\n@@ -32,7 +36,8 @@\n   \"homepage\": \"https://github.com/Radwa1493/API#readme\",\n   \"devDependencies\": {\n     \"jest\": \"^25.5.4\",\n     \"jest-html-reporter\": \"^3.10.0\",\n-    \"node-fetch\": \"^2.6.11\"\n+    \"node-fetch\": \"^2.6.0\",\n+    \"prettier\": \"^2.8.8\"\n   }\n }\n"
                 }
             ],
             "date": 1686229866443,
